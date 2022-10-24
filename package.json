@@ -1,0 +1,11 @@
+{
+  "name": "sitemaman",
+  "version": "1.0.0",
+  "description": "Le Jardin sur l'Eau | Charme et accueil chaleureux dans une maison bourgeoise avec jardin en cœur de ville",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

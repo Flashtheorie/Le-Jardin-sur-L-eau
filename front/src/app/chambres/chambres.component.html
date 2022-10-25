@@ -17,13 +17,20 @@
             <span class="ml-2">Réserver</span>
         </button>
     </div>
-<!-- bouton réserver -->
+
+    <div class="text-slate-100 lg:w-1/2 md:w-2/3 font-extrabold text-center m-auto lg:my-6 md:my-l my-2" >"{{chambre.description}}"</div>
     
-    
+
+
+    <hr class="w-1/2 flex m-auto">
+    <div class="text-center text-5xl text-slate-100 font-black mt-6">Galerie</div>
     <div  class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-2 my-6 lg:mx-28" >
 <div *ngFor="let photos of chambre.photos">
     <img src="{{photos}}" class="rounded-3xl">
 </div></div>
 
+<div  *ngFor="let equipement of chambre.equipements" class="my-16">
+    <div class="text-center text-base text-slate-100 font-black mt-6">-{{equipement}}</div>
     
+</div>
 </div>

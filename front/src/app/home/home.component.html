@@ -1,9 +1,14 @@
+<div *ngFor="let chambre of chambres" class="text-slate-50 text-xl">
+    <a  routerLink="/chambre/{{chambre._id}}">{{chambre.nom}}</a>
+</div>
 <div class="relative">
     <img src="assets/1002.jpg" class="object-cover max-h-screen min-h-screen w-full ">
-            <h1 routerLink="/choix" class="cursor-pointer border-8 border-white rounded-2xl   backdrop-blur-xl p-6 bg-opacity-40 absolute lg:text-5xl text-xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-extrabold">
+            <h1 routerLink="/choix" class="hover:text-amber-700 cursor-pointer border-8 hover:border-amber-700 border-white rounded-2xl   backdrop-blur-xl p-6 bg-opacity-40 absolute lg:text-5xl text-xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-extrabold">
                 Le Jardin Sur L'Eau
+                <br>
                 
             </h1>
+            
                 <div> 
             
             

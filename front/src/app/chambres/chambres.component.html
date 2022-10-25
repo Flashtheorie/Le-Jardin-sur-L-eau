@@ -1,1 +1,29 @@
-<p>chambres works!</p>
+<button routerLink="/home" class="ml-6 mt-6 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded">
+    <i class="fa-solid fa-left-long"></i>
+</button>
+
+
+    
+
+<div *ngFor="let chambre of chambreinfos">
+
+
+    <div class="text-center mt-16 text-6xl text-slate-300 font-black">"{{chambre.nom}}"</div>
+    <br>
+    <div class="text-base text-center text-slate-50">Cette chambre est <span class="text-green-500 font-black">Disponible</span> pour ce soir</div>
+    <div class="flex justify-center">
+        <button class="mt-6 bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span class="ml-2">Réserver</span>
+        </button>
+    </div>
+<!-- bouton réserver -->
+    
+    
+    <div  class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-2 my-6 lg:mx-28" >
+<div *ngFor="let photos of chambre.photos">
+    <img src="{{photos}}" class="rounded-3xl">
+</div></div>
+
+    
+</div>

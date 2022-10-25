@@ -46,6 +46,14 @@ app.get('/api/getchambres', function(req, res) {
     );
 }
 );
+ // singlechambre
+app.get('/api/getchambre/:id', function(req, res) {
+    db.collection('chambres').find({_id: ObjectId(req.params.id)}).toArray(function(err, result) {
+        if (err) throw err;
+        res.json(result);
+    }
+    );
+});
 
 // Additionne le nombre de lits de toutes les chambres
 app.get('/api/bedsavailable/:place', function(req, res) {

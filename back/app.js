@@ -47,7 +47,26 @@ app.get('/api/getchambres', function(req, res) {
 }
 );
 
+// Additionne le nombre de lits de toutes les chambres
+app.get('/api/bedsavailable/:place', function(req, res) {
+    db.collection(req.params.place).aggregate([
+        { $group: { _id: null, total: { $sum: "$lits" } } }
+    ]).toArray(function(err, result) {
+        if (err) throw err;
+        res.json(result);
+    }
+    );
+});
 
+// fetch photos from chambre
+app.get('/api/getphotos/:id', function(req, res) {
+    db.collection('chambres').find({ _id: ObjectId(req.params.id) }).toArray(function(err, result) {
+        if (err) throw err;
+        // show only the array photos
+        res.json(result[0].photos);
+    }
+    );
+});
 
 app.listen(PORT, function(){
     console.log("Node Js Server running on port " + PORT 
